@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>VNPay Payment</title>
+</head>
+<body>
+<h1>Thanh toán VNPay</h1>
+<form th:action="@{/payment}" method="post">
+    <label for="amount">Số tiền:</label>
+    <input type="text" id="amount" name="amount" required>
+    <button type="submit">Thanh toán</button>
+</form>
+<div th:if="${errorMessage}">
+    <p th:text="${errorMessage}" style="color: red;"></p>
+</div>
+</body>
+</html>

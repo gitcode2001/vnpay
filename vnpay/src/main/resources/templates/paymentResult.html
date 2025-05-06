@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>VNPay Payment Result</title>
+</head>
+<body>
+<h1>Kết quả thanh toán</h1>
+<div th:if="${paymentUrl}">
+  <p>Nhấn vào link bên dưới để chuyển đến trang thanh toán:</p>
+  <a th:href="${paymentUrl}" target="_blank" th:text="${paymentUrl}"></a>
+</div>
+<div th:if="${message}">
+  <p th:text="${message}"></p>
+</div>
+<a th:href="@{/payment}">Quay lại</a>
+</body>
+</html>
